@@ -1,0 +1,19 @@
+* { box-sizing: border-box;}
+a { color: inherit; text-decoration: none; }
+
+html {
+    margin: 0;
+    font-size: 100%;
+    background-color: palegoldenrod;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+
+/* structure */
+.topbar {
+    background-color: #343d46;
+}
