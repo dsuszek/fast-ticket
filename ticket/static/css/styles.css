@@ -1,3 +1,7 @@
+.important_ticket {
+    color: red;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -159,4 +163,5 @@ body {
 .main-menu {
     padding-top: 50px;
 }
+
 

@@ -1,1 +1,1 @@
-#fast_ticket
+Ticket system keeping track of all current tasks for team of developers.

@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="{% static "css/buttons.css" %}">
     <title>Ticket</title>
 </head>
-<body>
 
-<h1>Add new ticket</h1>
+<div style="text-align: center;">
+    <body>
 
-<form method="post">
-    {% csrf_token %}
+    <h1>Add new ticket</h1>
 
-    {{ form.as_p }}
+    <form method="post">
+        {% csrf_token %}
 
-    <button class="button-3" role="button">Add</button>
-</form>
+        {{ form.as_p }}
 
-</body>
+        <button class="button-3" role="button">Add</button>
+    </form>
+
+    </body>
+</div>
+
 </html>

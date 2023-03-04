@@ -2,9 +2,9 @@ import datetime
 from django.db import models
 
 
-REALIZED = 'REALIZED'
-STARTED = 'STARTED BUT NOT REALIZED YET'
-NOT_STARTED = 'NOT STARTED YET'
+REALIZED = 'Realized'
+STARTED = 'Started but not finished yet'
+NOT_STARTED = 'Not started yet'
 
 STATUS = [
     (REALIZED, 'Already completed'),
@@ -12,9 +12,9 @@ STATUS = [
     (NOT_STARTED, 'Not started yet'),
 ]
 
-LOW = 'LOW'
-MEDIUM = 'MEDIUM'
-HIGH = 'HIGH'
+LOW = 'Low'
+MEDIUM = 'Medium'
+HIGH = 'High'
 
 PRIORITY = [
     (LOW, 'Low'),

@@ -10,38 +10,30 @@
 </head>
 
 <body>
+    <div style="text-align: center;">
+        <div id="main-menu">
+            <h1>My tickets</h1>
+            <button class="button-3" role="button">
+                <a href="/ticket/add">Add new ticket</a>
+            </button>
+            <ul>
+                {% for ticket in tickets %}
+                    {% if ticket.priority == "high" %}
+                        <div class="important_ticket">
+                            <li><a href="/ticket/{{ ticket.id }}">{{ ticket.title }}</a></li>
+                        </div>
+                    {% else %}
+                        <div class="normal_ticket">
+                            <li><a href="/ticket/{{ ticket.id }}">{{ ticket.title }}</a></li>
+                        </div>
+                    {% endif %}
+                {% endfor %}
 
-{#<nav role="navigation">#}
-{#  <div id="menuToggle">#}
-{#    <input type="checkbox" />#}
-{##}
-{##}
-{##}
-{#    <span></span>#}
-{#    <span></span>#}
-{#    <span></span>#}
-{##}
-{##}
-{#    <ul id="menu">#}
-{#      <a href="#"><li>Home</li></a>#}
-{#    </ul>#}
-{#  </div>#}
-{#</nav>#}
+            </ul>
+        </div>
 
-<div id="main-menu">
-<h1>My tickets</h1>
-<button class="button-3" role="button">
-   <a href="/ticket/add">Add new ticket</a>
-</button>
+    </div>
 
-    <ul>
-
-        {% for ticket in tickets %}
-            <li>{{ ticket.id }} - <a href="/ticket/{{ ticket.id }}">{{ ticket.title }}</a></li>
-        {% endfor %}
-
-    </ul>
-</div>
 
 </body>
 </html>

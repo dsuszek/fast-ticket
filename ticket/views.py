@@ -6,6 +6,7 @@ from ticket import models, forms
 class MainView(View):
     def get(self, request):
         tickets = models.Ticket.objects.all ()
+        # TODO: tickets should be displayed in different colors, depending on the priority
         return render(request, "main.html", {"tickets": tickets})
 
 
@@ -25,3 +26,7 @@ class AddTicketView(View):
         if form.is_valid():
             form.save()
         return redirect("main")
+
+class SummaryView(View):
+    def get(self, request):
+        pass
