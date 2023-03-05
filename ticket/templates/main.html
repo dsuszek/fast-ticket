@@ -18,13 +18,17 @@
             </button>
             <ul>
                 {% for ticket in tickets %}
-                    {% if ticket.priority == "high" %}
-                        <div class="important_ticket">
-                            <li><a href="/ticket/{{ ticket.id }}">{{ ticket.title }}</a></li>
+                    {% if ticket.priority == "High" %}
+                        <div class="ticket high_importance_ticket">
+                            <li><a href="/ticket/{{ ticket.id }}" style="color:red">{{ ticket.title }}</a></li>
+                        </div>
+                    {% elif ticket.priority == "Medium" %}
+                        <div class="ticket medium_importance_ticket">
+                            <li><a href="/ticket/{{ ticket.id }}" style="color:orange">{{ ticket.title }}</a></li>
                         </div>
                     {% else %}
-                        <div class="normal_ticket">
-                            <li><a href="/ticket/{{ ticket.id }}">{{ ticket.title }}</a></li>
+                        <div class="ticket low_importance_ticket">
+                            <li><a href="/ticket/{{ ticket.id }}" style="color:green">{{ ticket.title }}</a></li>
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -33,7 +37,6 @@
         </div>
 
     </div>
-
-
 </body>
 </html>
+
