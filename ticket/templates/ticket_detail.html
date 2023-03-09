@@ -11,7 +11,19 @@
 
     <div style="text-align: center;">
 
-        <h1>{{ ticket.title }}</h1>
+        {% if ticket.priority == "High" %}
+            <div class="ticket high_importance_ticket">
+                <a style="color:red"><b>{{ ticket.title }}</b></a>
+            </div>
+        {% elif ticket.priority == "Medium" %}
+            <div class="ticket medium_importance_ticket">
+                <a style="color:orange"><b>{{ ticket.title }}</b></a>
+            </div>
+        {% else %}
+            <div class="ticket low_importance_ticket">
+                <a style="color:green"><b>{{ ticket.title }}</b></a>
+            </div>
+        {% endif %}
 
         <ul>
             <li>Category: {{ ticket.category }}</li>
